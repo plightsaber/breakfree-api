@@ -9,7 +9,6 @@ namespace App\Dialog;
 class DialogModel
 {
     protected $avatar;
-    // protected $channel;
     protected $message;
 
     protected $page;
@@ -22,9 +21,11 @@ class DialogModel
     public function createView()
     {
         return [
-            'avatar' => $this->avatar,
+            'avatarID' => $this->avatar,
             'buttons' => $this->getButtons(),
             'message' => "Hello World!",
+            'page' => $this->page,
+            'menu' => "owner"
         ];
     }
 
